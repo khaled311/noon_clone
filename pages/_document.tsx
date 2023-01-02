@@ -1,13 +1,13 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
+export default function Document(props: { locale: string | undefined }) {
   return (
-    <Html lang="en">
+    <Html lang={props.locale} dir={props.locale === "en" ? "ltr" : "rtl"}>
       <Head />
-      <body>
+      <body className="debug-screens">
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }
