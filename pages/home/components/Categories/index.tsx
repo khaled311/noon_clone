@@ -29,6 +29,7 @@ const Categories = () => {
               alt=""
             />
             <span className="text-sm mt-2">{item?.name}</span>
+            khaled
           </Link>
         ))}
       </div>
